@@ -57,8 +57,8 @@ mod tests {
 
     #[test]
     fn country_default() {
-        let event = Country::default();
-        assert_eq!(event, Country{
+        let country = Country::default();
+        assert_eq!(country, Country{
             name: String::new(),
             description: String::new(),
             interval: (Date::MIN, Date::MAX),

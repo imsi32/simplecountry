@@ -49,8 +49,8 @@ mod tests {
 
     #[test]
     fn person_default() {
-        let event = Person::default();
-        assert_eq!(event, Person{
+        let person = Person::default();
+        assert_eq!(person, Person{
             name: String::new(),
             description: String::new(),
             interval: (Date::MIN, Date::MAX),

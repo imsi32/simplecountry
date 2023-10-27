@@ -43,8 +43,8 @@ mod tests {
 
     #[test]
     fn work_default() {
-        let event = Work::default();
-        assert_eq!(event, Work{
+        let work = Work::default();
+        assert_eq!(work, Work{
             name: String::new(),
             description: String::new(),
             interval: (Date::MIN, Date::MAX),
