@@ -7,6 +7,7 @@ use crate::{
     work::Work,
 };
 
+/// To implement persons.
 #[derive(Debug, PartialEq)]
 pub struct Person<'a> {
     name: String,
@@ -41,7 +42,10 @@ impl<'a> Thing<'a> for Person<'a>{
 }
 
 impl<'a> Person<'a> {
+    /// For returning [`Person`]'s events.
     pub fn get_events(self) -> &'a [Event<'a>] { self.events }
+
+    /// For returning [`Person`]'s works.
     pub fn get_works(self) -> &'a [Work<'a>] { self.works }
 }
 

@@ -4,6 +4,9 @@ use time::Date;
 use crate::thing::Thing;
 use crate::person::Person;
 
+/// To implement human works such as:
+///
+/// structures, books, languages... 
 #[derive(Debug, PartialEq)]
 pub struct Work<'a> {
     name: String,
@@ -36,6 +39,7 @@ impl<'a> Thing<'a> for Work<'a>{
 }
 
 impl<'a> Work<'a> {
+    /// For returning [`Work`]'s persons.
     pub fn get_persons(self) -> &'a [Person<'a>] { self.persons }
 }
 

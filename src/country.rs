@@ -9,6 +9,7 @@ use crate::{
     person::Person,
 };
 
+/// To implement countries.
 #[derive(Debug, PartialEq)]
 pub struct Country<'a> {
     name: String,
@@ -47,9 +48,16 @@ impl<'a> Thing<'a> for Country<'a>{
 }
 
 impl<'a> Country<'a> {
+    /// For returning [`Country`]'s continents.
     pub fn get_continent(self) -> &'a [Continent] { self.continent }
+
+    /// For returning [`Country`]'s events.
     pub fn get_events(self) -> &'a [Event<'a>] { self.events }
+
+    /// For returning [`Country`]'s works.
     pub fn get_works(self) -> &'a [Work<'a>] { self.works }
+
+    /// For returning [`Country`]'s persons.
     pub fn get_persons(self) -> &'a [Person<'a>] { self.persons }
 }
 

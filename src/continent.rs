@@ -1,5 +1,6 @@
-//! The [`Continent`] enumeration and its variants.
+//! The [`Continent`] enumeration.
 
+/// Enumeration for continents
 #[derive(Debug, PartialEq)]
 pub enum Continent {
     Africa,

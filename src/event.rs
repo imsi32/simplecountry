@@ -4,6 +4,7 @@ use time::Date;
 use crate::thing::Thing;
 use crate::person::Person;
 
+/// To implement historical events.
 #[derive(Debug, PartialEq)]
 pub struct Event<'a> {
     name: String,
@@ -36,6 +37,7 @@ impl<'a> Thing<'a> for Event<'a>{
 }
 
 impl<'a> Event<'a> {
+    /// For returning [`Event`]'s persons.
     pub fn get_persons(self) -> &'a [Person<'a>] { self.persons }
 }
 
