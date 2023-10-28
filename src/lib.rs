@@ -1,3 +1,7 @@
+//! # Simple Country
+//! 
+//! A library for creating simple countries.
+
 pub mod thing;
 pub mod event;
 pub mod work;

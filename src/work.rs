@@ -1,3 +1,5 @@
+//! The [`Work`] struct and its associated `impl`s.
+
 use time::Date;
 use crate::thing::Thing;
 use crate::person::Person;
@@ -30,10 +32,10 @@ impl<'a> Thing<'a> for Work<'a>{
     fn get_description(&self) -> String { self.description.clone() }
     fn get_interval(&self) -> (Date, Date) { self.interval }
     fn get_tags(&self) -> &'a [String] { self.tags }
+    fn get_details(self) -> &'a [String] { self.details }
 }
 
 impl<'a> Work<'a> {
-    pub fn get_details(self) -> &'a [String] { self.details }
     pub fn get_persons(self) -> &'a [Person<'a>] { self.persons }
 }
 

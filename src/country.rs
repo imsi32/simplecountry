@@ -1,3 +1,5 @@
+//! The [`Country`] struct and its associated `impl`s.
+
 use time::Date;
 use crate::thing::Thing;
 use crate::continent::Continent;
@@ -41,10 +43,10 @@ impl<'a> Thing<'a> for Country<'a>{
     fn get_description(&self) -> String { self.description.clone() }
     fn get_interval(&self) -> (Date, Date) { self.interval }
     fn get_tags(&self) -> &'a [String] { self.tags }
+    fn get_details(self) -> &'a [String] { self.details }
 }
 
 impl<'a> Country<'a> {
-    pub fn get_details(self) -> &'a [String] { self.details }
     pub fn get_continent(self) -> &'a [Continent] { self.continent }
     pub fn get_events(self) -> &'a [Event<'a>] { self.events }
     pub fn get_works(self) -> &'a [Work<'a>] { self.works }
